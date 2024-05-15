@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your  code will go here
+// Greeting Card component
+    function GreetingCard({ greeting, name }) {
+      return (
+        <div style={{border:'1px solid red',width:"200px",height:"100px",margin:"20px",padding:"10px",backgroundColor:"blue"}}>
+            
+            <p>
+                {greeting},
+                {name}
+                </p>
+                </div>
+      );
+    }
+    //main App component
+    function App() {
+        // Array the GreetingCards data
+      const GreetingCards = [
+        { greeting: "Happy Birthday", name: "Abhi" },
+        { greeting: "Happy Birthday", name: "Golu" },
+        { greeting: "Happy Birthday", name: "Deepak" },
+      ]
+      return (
+        <div>
+        {/*Render a Greeting Component for each object in the greetingCards Array*/}
+          {GreetingCards.map((ele ,index) => (
+            <GreetingCard key={index} greeting={ele.greeting} name={ele.name}  />
+          ))}
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</html>
