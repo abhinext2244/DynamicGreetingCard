@@ -13,4 +13,4 @@ cdn link babel
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/greeting-cards-app.git
+   https://github.com/abhinext2244/DynamicGreetingCard.git
